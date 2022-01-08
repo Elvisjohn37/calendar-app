@@ -1,0 +1,42 @@
+{
+  "tasks": [
+    {
+      "taskName": "patch prod",
+      "date": "Jan 02, 2020",
+      "stateId": 1,
+      "id": 4
+    },
+    {
+      "taskName": "assds",
+      "date": "dsdsd",
+      "stateId": "3",
+      "id": 6
+    },
+    {
+      "stateId": "1",
+      "taskName": "cayetano",
+      "date": "dsd",
+      "id": 7
+    },
+    {
+      "taskName": "dsd",
+      "date": "dsdsd",
+      "stateId": "1",
+      "id": 8
+    }
+  ],
+  "states": [
+    {
+      "id": "1",
+      "stateName": "done"
+    },
+    {
+      "id": "2",
+      "stateName": "pending"
+    },
+    {
+      "id": "3",
+      "stateName": "on-going"
+    }
+  ]
+}

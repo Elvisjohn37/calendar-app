@@ -1,0 +1,31 @@
+@import './../assets/scss/_colors';
+@import './../assets/scss/_main';
+
+.c-button {
+    cursor: pointer;
+    transition: $main_transition;
+    padding: $main_standardSpace;
+    border: unset;
+    border-radius: $main_radius;
+}
+
+.success {
+    background-color: $color_success;
+}
+
+.primary {
+    @include colors_primary();
+
+    &:hover {
+        @include colors_pDark();
+    }
+}
+
+.secondary {
+    @include colors_sLight();
+    border: 1px solid $colors_primary;
+
+    &:hover {
+        background-color: $colors_sDark;
+    }
+}

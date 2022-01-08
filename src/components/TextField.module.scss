@@ -1,0 +1,17 @@
+@import './../assets/scss/_colors';
+@import './../assets/scss/_main';
+
+.c-text-field {
+    min-width: 207px;
+    border: unset;
+    border-bottom: 1px solid $colors_pDark;
+    padding: $main_standardSpace;
+    min-width: 170px;
+    transition: $main_transition;
+
+    &:focus-visible {
+        background-color: $colors_sLight;
+        outline: unset;
+        border-bottom: 2px solid $colors_pDark;
+    }
+}

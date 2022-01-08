@@ -1,0 +1,57 @@
+@import './../assets/scss/_colors';
+@import './../assets/scss/_main';
+
+.c-task-card {
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: $main_transition;
+    padding: $main_standardSpace;
+    box-shadow: 0px 1px 2px $colors_sDark;
+    border-radius: $main_radius / 2;
+    max-width: 600px;
+    min-width: 300px;
+    margin-bottom: $main_standardSpace;
+
+    &:hover {
+        @include colors_sLight(.5);
+    }
+
+    .c-task-card-content {
+        display: flex;
+        align-items: flex-end;
+
+        .c-task-card-state, .c-task-card-date {
+            margin-top: $main_standardSpace;
+        }
+
+        .c-task-card-state {
+            flex: 1;
+            font-weight: bold;
+            padding: $main_standardSpace;
+            padding-left: 0;
+        }
+
+        .c-task-card-state-done {
+            display: inline;
+            color: $color_success;
+        }
+
+        .c-task-card-state-pending {
+            display: inline;
+            color: $color_pending;
+        }
+
+        .c-task-card-state-on-going {
+            display: inline;
+            color: $color_warning;
+        }
+
+        .c-task-card-date {
+            flex: 1;
+            text-align: right;
+            padding-right: 0;
+
+        }
+    }
+}
+

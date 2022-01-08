@@ -1,0 +1,69 @@
+@import './../assets/scss/_helpers';
+
+.c-task-list-info {
+    padding: $main_standardSpace * 4 $main_standardSpace $main_standardSpace * 4 $main_standardSpace;
+
+    .c-task-list-info-header {
+        position: relative;
+        display: flex;
+
+        .c-task-list-info-header-text {
+            flex: 1;
+            font-size: $main_fontSize;
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        .c-task-list-info-header-button-container {
+            flex: 1;
+
+            .c-task-list-info-button-filter {
+                float: left;
+            }
+        }
+
+        div {
+            flex: 1;
+        }
+    }
+
+    .c-task-list-info-content {
+        margin-top: $main_standardSpace;
+
+        .c-task-list-info-container {
+            width: fit-content;
+            @include helpers_hCenter(absolute);
+
+            @media(max-width: 320px) {
+                @include helpers_center(absolute);
+            }
+
+            .c-task-list-info-form-group {
+                width: fit-content;
+                margin: auto;
+    
+                .c-task-list-info-text-field, .c-task-list-info-dropdown {
+                    min-width: 300px;
+                }
+            }
+    
+            .c-task-list-info-form-group-action {
+                display: flex;
+    
+                .c-task-list-info-delete-button {
+                    flex: 1;
+                    left: $main_standardSpace;
+                    position: absolute;
+                }
+    
+                .c-task-list-info-update-button {
+                    flex: 1;
+                    right: $main_standardSpace;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

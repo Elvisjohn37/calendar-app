@@ -1,0 +1,23 @@
+@mixin fadein($dur: .3s) {
+    animation: fadein $dur;
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin slideToLeft($dur: .3s, $from: 100%) {
+    animation: fadein $dur linear;
+    @keyframes fadein {
+        from {
+            transform: translateX($from);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}

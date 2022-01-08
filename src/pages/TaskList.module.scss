@@ -1,0 +1,58 @@
+@import './../assets/scss/_helpers';
+
+.c-task-list {
+    padding: $main_standardSpace * 4 $main_standardSpace $main_standardSpace * 4 $main_standardSpace;
+
+    .c-task-list-header {
+        position: relative;
+        display: flex;
+
+        .c-task-list-header-text {
+            flex: 1;
+            font-size: $main_fontSize;
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        .c-task-list-header-button-container {
+            flex: 1;
+
+            .c-task-list-button-filter {
+                float: right;
+            }
+        }
+
+        div {
+            flex: 1;
+        }
+    }
+
+    .c-task-list-content {
+        margin-top: $main_standardSpace;
+
+        .c-task-list-task-link {
+            display: flex;
+
+            .c-task-list-task-add-button {
+                flex: 1;
+                right: 0;
+                position: absolute;
+            }
+        }
+
+        .c-task-list-container {
+            width: fit-content;
+            @include helpers_hCenter(absolute);
+
+            @media(max-width: 320px) {
+                @include helpers_center(absolute);
+            }
+
+            .c-task-list-task-card {
+                min-width: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+$colors_primary: #00bcd4;
+$colors_pLight: #62efff;
+$colors_pDark: #008ba3;
+$colors_pText: #ffffff;
+
+$colors_secondary: #eeeeee;
+$colors_sLight: #ffffff;
+$colors_sDark: #bcbcbc;
+$colors_sText: rgb(90, 90, 90);
+
+$colors_link: lighten($colors_secondary, 10%);
+$colors_linkActive: lighten($colors_link, 20%);
+$colors_mainLayout_bg: darken($colors_sLight, 5%);
+
+$color_error: #ff604f;
+$color_success: rgb(0, 207, 138);
+$color_warning: rgb(240, 164, 0);
+$color_pending: rgb(255, 117, 4);
+
+// mixins
+@mixin colors_primary($opacity: 1) {
+	background-color: rgba($colors_primary, $opacity);
+	color: $colors_pText;
+}
+
+@mixin colors_pLight($opacity: 1) {
+	background-color: rgba($colors_pLight, $opacity);
+	color: $colors_pText;
+}
+
+@mixin colors_pDark($opacity: 1) {
+	background-color: rgba($colors_pDark, $opacity);
+	color: $colors_pText;
+}
+
+@mixin colors_secondary($opacity: 1) {
+	background-color: rgba($colors_secondary, $opacity);
+	color: $colors_sText;
+}
+
+@mixin colors_sLight($opacity: 1) {
+	background-color: rgba($colors_sLight, $opacity);
+	color: $colors_sText;
+}

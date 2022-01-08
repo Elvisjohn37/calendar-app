@@ -1,0 +1,64 @@
+@import './../assets/scss/_colors';
+@import './../assets/scss/_main';
+
+.c-toggle-option {
+    @include colors_sLight;
+    width: fit-content;
+    right: 85px;
+    position: absolute;
+    top: -40px;
+    border-radius: $main_radius;
+    box-shadow: 0 1px 3px $colors_sDark;
+    opacity: 0;
+    transform: scale(0);
+    transition: $main_transition;
+    z-index: 10000000;
+
+    &.c-toggle-option-show {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &::before {
+        content: '';
+        right: -9px;
+        border-top: 20px solid $colors_sLight;
+        border-left: 20px solid transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        backface-visibility: hidden;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+    }
+
+    ul {
+        width: fit-content;
+        
+        li {
+            list-style: none;
+            cursor: pointer;
+            padding: $main_standardSpace / 2 $main_standardSpace $main_standardSpace / 2 $main_standardSpace;
+
+            &:first-of-type{
+                padding-top: $main_standardSpace;
+            }
+
+            &:last-of-type  {
+                padding-bottom: $main_standardSpace;
+
+            }
+
+            &:hover {
+                background-color: $colors_secondary;
+            }
+        }
+
+        .c-toggle-option-defaultItem {
+            border-top: 1px solid lighten($colors_sDark, 10%);
+        }
+    }
+}

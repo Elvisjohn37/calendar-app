@@ -1,0 +1,16 @@
+@import './../assets/scss/_colors';
+@import './../assets/scss/_main';
+
+.c-select {
+    min-width: 207px;
+    border: unset;
+    border-bottom: 1px solid $colors_pDark;
+    padding: $main_standardSpace;
+    transition: $main_transition;
+
+    &:focus-visible {
+        background-color: $colors_sLight;
+        outline: unset;
+        border-bottom: 2px solid $colors_pDark;
+    }
+}
